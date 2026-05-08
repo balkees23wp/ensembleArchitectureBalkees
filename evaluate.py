@@ -153,7 +153,7 @@ def visualize_model_comparison(
     mean = np.array([0.485, 0.456, 0.406])
     std = np.array([0.229, 0.224, 0.225])
     x_np = np.clip(x_np * std + mean, 0, 1)
-    pred_np = (pred[:, 0].numpy() > 0.5).astype(np.float32)
+    pred_np = (preds[:, 0].numpy() > 0.5).astype(np.float32)
 
     rows = min(num_samples, x.shape[0])
     fig, axes = plt.subplots(rows, 3, figsize=(12, 4 * rows))
