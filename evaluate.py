@@ -273,7 +273,6 @@ def plot_metrics(df: pd.DataFrame, output_dir: str = DEFAULT_OUTPUT_DIR):
     _label_bars(ax_dice, df["Dice"])
     fig_dice.tight_layout()
     save_plot(fig_dice, "dice_comparison.png", output_dir)
-    save_plot(fig_dice, "dice_plot.png", output_dir)
     plt.show()
 
     # IoU comparison across evaluated models.
@@ -287,7 +286,6 @@ def plot_metrics(df: pd.DataFrame, output_dir: str = DEFAULT_OUTPUT_DIR):
     _label_bars(ax_iou, df["IoU"])
     fig_iou.tight_layout()
     save_plot(fig_iou, "iou_comparison.png", output_dir)
-    save_plot(fig_iou, "iou_plot.png", output_dir)
     plt.show()
 
     # FPS versus parameter count across evaluated models.
@@ -308,7 +306,6 @@ def plot_metrics(df: pd.DataFrame, output_dir: str = DEFAULT_OUTPUT_DIR):
         ax_pp.grid(True, linestyle="--", alpha=0.35)
         fig_pp.tight_layout()
         save_plot(fig_pp, "fps_vs_parameter_count.png", output_dir)
-        save_plot(fig_pp, "fps_vs_params.png", output_dir)
         plt.show()
 
 
