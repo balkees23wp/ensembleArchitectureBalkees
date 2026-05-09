@@ -168,7 +168,7 @@ def visualize_model_comparison(
     models: Dict[str, torch.nn.Module],
     loader,
     device: torch.device,
-    num_samples: int = 2,
+    num_samples: int = 3,
     output_dir: str = DEFAULT_OUTPUT_DIR,
     filename: str = "predictions_all_models.png",
 ):
